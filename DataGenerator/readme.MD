@@ -3,13 +3,13 @@
 #### Deployment and run configuration:
 	The data generator is built on Java 11, and can be started from the command line after configuring the ./scripts/start_publication_generator.py
 	Additionally, after the Java project is built, the jar artifact 'data-generator-1.0.jar' is produced.
-	This jar artifact, together with the Python script and with the '/target/dependency-jars' can be placed in an folder to obtain a deployable package.
+	This jar artifact, together with the Python script and with the '/target/dependency-jars' can be placed in a folder to obtain a deployable package.
 	The Python script facilitates the configuration of the input parameters. For example:
 		'--dataRequestType', 'PUBLICATION'
 		'--parallelizationFactor', '4'
 		'--totalNumberOfRecords', '20000'
 	Currently only the publications generator is implemented, while only the support functionality for a subcriptions generator is in place.
-	There will be implemented a greedy algorithm to split the fields population between the task generator threads based on each field weight factor.
+	For the subscription generator there will be implemented a GREEDY algorithm to split the fields population between the task generator threads based on the weight factor of each field.
 
 #### Parallelization of the data set generation:
     It is implemented based on the 'java.util.concurrent' package, using threads (ExecutorService and Callable).
