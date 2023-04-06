@@ -2,7 +2,6 @@ package com.fii.ebs.datagenerator.generators;
 
 import com.fii.ebs.datagenerator.output.PublicationRecord;
 import com.fii.ebs.datagenerator.request.PublicationDataRequest;
-import com.google.gson.annotations.SerializedName;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
